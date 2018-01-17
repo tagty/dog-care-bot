@@ -38,3 +38,7 @@ post '/callback' do
 
   "OK"
 end
+
+get '/' do
+  "Hello World!"
+end
