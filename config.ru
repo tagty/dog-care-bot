@@ -1,5 +1,2 @@
-require 'rubygems'
-require 'sinatra'
-require './app'
-
+require './hello'
 run Sinatra::Application
