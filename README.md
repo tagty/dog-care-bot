@@ -1,3 +1,4 @@
 # Dog Care Bot
 ## Todo
-- No web processes running
+- Post
+- update suggested: rest-client ~> 1.7.3.
