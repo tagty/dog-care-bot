@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 gem 'sinatra'
-gem 'heroku'
 gem 'thin'
+gem 'line-bot-api'
+gem 'pry', :group => :development
+gem 'dotenv', :group => [:development, :test]
 
 group :test do
   gem 'rspec'
