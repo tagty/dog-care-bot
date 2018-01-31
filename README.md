@@ -1,4 +1,18 @@
 # Dog Care Bot
+Helps to care dogs
+
 ## Todo
-- Webhook
-- Test Post
+- security vulnerability
+- Test require message 
+- Use volume on docker
+- Random responder
+- Binding pry on Docker
+- Make post method small
+- Move app to lib
+- AI
+
+## Commands
+```
+$ docker build -t dog-care-bot .
+$ docker run dog-care-bot bundle exec rspec -fd
+```

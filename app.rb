@@ -1,7 +1,8 @@
 # app.rb
 require 'sinatra'
 require 'line/bot'
-#require 'pry' 
+require './lib/message'
+#require 'pry'
 #require 'dotenv/load'
 
 def client
@@ -17,7 +18,6 @@ end
 
 post '/callback' do
   body = request.body.read
-
   signature = request.env['HTTP_X_LINE_SIGNATURE']
   unless client.validate_signature(body, signature)
     error 400 do 'Bad Request' end
@@ -31,7 +31,7 @@ post '/callback' do
       when Line::Bot::Event::MessageType::Text
         message = {
           type: 'text',
-          text: event.message['text']
+          text: Message.post(event.message['text'])
         }
         client.reply_message(event['replyToken'], message)
       when Line::Bot::Event::MessageType::Image, Line::Bot::Event::MessageType::Video
