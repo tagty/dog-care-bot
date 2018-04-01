@@ -1,5 +1,5 @@
-require 'responder'
-require 'dictionary'
+require_relative 'responder'
+require_relative 'dictionary'
 
 class Message
   def initialize
