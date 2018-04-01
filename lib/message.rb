@@ -16,11 +16,22 @@ end
 class RandomResponder < Responder
   def initialize(name)
     super
-    @response = ['今日は寒いね。', 'おやつ食べたい！', '遊ぼう！']
+    @phrases = []
+    open('dics/random.txt') do |f|
+      f.each do |line|
+        line.chomp!
+        next if line.empty?
+        @phrases.push(line)
+      end
+    end
   end
 
   def response(input)
-    @response[rand(@response.size)]
+    select_random @phrases
+  end
+
+  def select_random(array)
+    array[rand array.size]
   end
 end
 

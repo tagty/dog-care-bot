@@ -2,7 +2,7 @@
 Helps to care dogs
 
 ## Todo
-- security vulnerability
+- Circle CI
 - Make post method small
 - Move app to lib
 - AI
