@@ -1,4 +1,4 @@
-require 'morph'
+require_relative 'morph'
 
 class Dictionary
   attr_reader :random, :pattern, :template
