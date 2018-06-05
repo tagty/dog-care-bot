@@ -2,9 +2,8 @@
 Helps to care dogs
 
 ## Todo
+- NEologd
 - Circle CI
-- Make post method small
-- Move app to lib
 - AI
 
 ## Commands
@@ -12,3 +11,4 @@ Helps to care dogs
 $ docker build -t dog-care-bot . && docker run -it -e RUBYOPT=-EUTF-8 dog-care-bot bundle exec rspec -fd
 $ docker run --rm -v "$PWD":/app -w /app dog-care-bot bundle install
 ```
+
